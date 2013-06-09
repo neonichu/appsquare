@@ -1,0 +1,3 @@
+[submodule "vendor/apppy"]
+	path = vendor/apppy
+	url = https://github.com/mlv/apppy.git

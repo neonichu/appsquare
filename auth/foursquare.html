@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>appsquare access</title>
+    <script type="text/javascript">
+    	function getURLParameter(name) {
+    		return decodeURI((RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]);
+    	}
+
+    	window.onload = function() {
+    		document.getElementById('token').innerHTML = getURLParameter('code');
+    	};
+    </script>
+  </head>
+  <body>
+  	<h1>Your access token: <span id='token'></span></h1>
+  </body>
+</html>
