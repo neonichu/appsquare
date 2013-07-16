@@ -27,10 +27,11 @@ from foursquare import Foursquare
 import webbrowser
 
 if FOURSQUARE_USER_TOKEN:
-	foursq_client = Foursquare(access_token=FOURSQUARE_USER_TOKEN)
+	foursq_client = Foursquare(access_token=FOURSQUARE_USER_TOKEN, version='20130415')
 else:
 	foursq_client = Foursquare(client_id=FOURSQUARE_CLIENT_ID, 
-		client_secret=FOURSQUARE_CLIENT_ID, redirect_uri='http://vu0.org/projects/appsquare/foursquare.html')
+		client_secret=FOURSQUARE_CLIENT_SECRET, redirect_uri='http://vu0.org/projects/appsquare/foursquare.html',
+		version='20130415')
 	webbrowser.open(foursq_client.oauth.auth_url())
 	foursq_code = raw_input('Please paste the code from the website: ')
 	access_token = foursq_client.oauth.get_token(foursq_code)
