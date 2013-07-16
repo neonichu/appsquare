@@ -1,8 +1,36 @@
 # appsquare
 
-Import Foursquare check-ins to your Ohai ADN journal.
+Import [Foursquare][1] check-ins to your [Ohai][2] [ADN][3] journal. 
 
+This is **alpha** software, I am not responsible for any issues with it, but I am glad to help with them :). Be aware that the script imports **all** of your checkins. 
+
+The script is just a couple of lines of Python and you can tackle stuff from the TODO list if you want to help out - just send a pull request.
+
+## Installation
 
 $ sudo pip install foursquare
 $ git submodule update --init --recursive
 
+## Requirements
+
+You will need to obtain API tokens for [Foursquare][1] and [ADN][3].
+Those will need to be inserted into the *appsquare.py* script.
+
+For Foursquare:
+
+1. Go to <https://foursquare.com/developers/apps>.
+2. Create an application.
+3. Insert *FOURSQUARE_CLIENT_ID* and *FOURSQUARE_CLIENT_SECRET* into the script.
+4. On first run of the script, you will need to go through an OAuth process in your browser.
+5. The token that comes from OAuth needs to end up in the variable *FOURSQUARE_USER_TOKEN*.
+
+For ADN:
+
+1. Got to <https://account.app.net/developer/apps/> and create an app.
+2. Click on 'Generate a user token for yourself' and copy that into the *APP_TOKEN* variable.
+3. We need permissions for messages and public\_messages.
+
+
+[1]: http://foursquare.com
+[2]: http://ohaiapp.net
+[3]: http://app.net
