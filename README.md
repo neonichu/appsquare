@@ -8,6 +8,8 @@ The script is just a couple of lines of Python and you can tackle stuff from the
 
 ## Installation
 
+    $ brew install python
+    $ sudo easy_install pip
     $ sudo pip install requests foursquare
     $ git submodule update --init --recursive
 
