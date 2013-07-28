@@ -8,7 +8,7 @@ The script is just a couple of lines of Python and you can tackle stuff from the
 
 ## Installation
 
-    $ sudo pip install foursquare
+    $ sudo pip install requests foursquare
     $ git submodule update --init --recursive
 
 ## Requirements
