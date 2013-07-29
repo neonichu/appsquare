@@ -10,4 +10,5 @@ for post in appsquare.getOhaiPosts():
 
     annotations = post['annotations']
     location = annotations[0]['value']['name'] if len(annotations) > 0 else 'unknown'
-    print '"%s" at %s' % (post.get('text', ''), location)
+    print '"%s" at %s'.encode('utf-8') % (post.get('text', '').encode('utf-8'),
+            location.encode('utf-8'))
