@@ -8,8 +8,10 @@ The script is just a couple of lines of Python and you can tackle stuff from the
 
 ## Installation
 
-$ sudo pip install foursquare
-$ git submodule update --init --recursive
+    $ brew install python
+    $ sudo easy_install pip
+    $ sudo pip install requests foursquare
+    $ git submodule update --init --recursive
 
 ## Requirements
 
@@ -26,10 +28,16 @@ For Foursquare:
 
 For ADN:
 
-1. Got to <https://account.app.net/developer/apps/> and create an app.
+If you have a developer account:
+
+1. Go to <https://account.app.net/developer/apps/> and create an app.
 2. Click on 'Generate a user token for yourself' and copy that into the *APP_TOKEN* variable.
 3. We need permissions for messages and public\_messages.
 
+If you don't:
+
+1. Go to <http://dev-lite.jonathonduerig.com>, make sure 'Messages' and 'Public messages' are checked.
+2. Click 'Authorize', authorize the app, get the token and copy it into the *APP_TOKEN* variable.
 
 [1]: http://foursquare.com
 [2]: http://ohaiapp.net
